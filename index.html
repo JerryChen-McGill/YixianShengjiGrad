@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A printable conversation card deck for graduate research labs." />
+    <title>Thread of Inquiry · Graduate Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Thread of Inquiry home"><span class="thread-mark">∿</span><span>Thread of<br />Inquiry</span></a>
+      <div class="deck-meta"><span id="cardCount">40</span> cards · Graduate Edition</div>
+      <div class="top-actions">
+        <button class="button button-quiet" id="selectAllBtn">Select all</button>
+        <button class="button button-dark" id="downloadSelectedBtn">Download selected <span id="selectedCount">0</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="intro">
+        <div>
+          <p class="eyebrow">A discussion deck for research labs</p>
+          <h1>Make the hidden<br /><em>number</em> speak.</h1>
+        </div>
+        <div class="intro-copy">
+          <p>Draw a number card. Choose one prompt. Describe something that fits its position from 0 to 100—without saying the number. Then work together to find the order.</p>
+          <p class="muted">Right-click any card to save it. Select cards for a print-ready batch.</p>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Card controls">
+        <div class="filter-group" role="group" aria-label="Filter cards">
+          <button class="filter active" data-filter="all">All cards</button>
+          <button class="filter" data-filter="research">Research</button>
+          <button class="filter" data-filter="lab-life">Lab life</button>
+          <button class="filter" data-filter="teaching">Teaching</button>
+        </div>
+        <button class="button button-outline" id="shuffleBtn">Shuffle deck</button>
+      </section>
+
+      <section class="deck" id="deck" aria-live="polite"></section>
+
+      <section class="creator" id="creator">
+        <div class="creator-heading">
+          <p class="eyebrow">Expand the deck</p>
+          <h2>Make a card for your lab.</h2>
+          <p>Two prompts make one card. Write the scale in a way that gives 0 and 100 a shared meaning.</p>
+        </div>
+        <form id="cardForm" class="card-form">
+          <label>Card title <input required maxlength="40" id="titleInput" placeholder="e.g., Conference Season" /></label>
+          <label>Category <select id="categoryInput"><option value="research">Research</option><option value="lab-life">Lab life</option><option value="teaching">Teaching</option></select></label>
+          <label class="wide">Prompt 01 <textarea required maxlength="160" id="promptOne" placeholder="0 = … · 100 = …"></textarea></label>
+          <label class="wide">Prompt 02 <textarea required maxlength="160" id="promptTwo" placeholder="0 = … · 100 = …"></textarea></label>
+          <div class="form-actions wide"><span id="formMessage" role="status"></span><button class="button button-accent" type="submit">Add to deck</button></div>
+        </form>
+      </section>
+    </main>
+    <footer>Designed for candid, curious conversations in graduate research communities.</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
