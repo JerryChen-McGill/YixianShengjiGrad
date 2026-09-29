@@ -27,7 +27,7 @@
           <h1>Make the hidden<br /><em>number</em> speak.</h1>
         </div>
         <div class="intro-copy">
-          <p>Draw a number card. Choose one prompt. Describe something that fits its position from 0 to 100—without saying the number. Then work together to find the order.</p>
+          <p>Draw a number card. Choose one topic. Describe something that fits its position from 1 to 100—without saying the number. Then work together to find the order.</p>
           <p class="muted">Right-click any card to save it. Select cards for a print-ready batch.</p>
         </div>
       </section>
@@ -48,13 +48,15 @@
         <div class="creator-heading">
           <p class="eyebrow">Expand the deck</p>
           <h2>Make a card for your lab.</h2>
-          <p>Two prompts make one card. Write the scale in a way that gives 0 and 100 a shared meaning.</p>
+          <p>Two large topics make one card. Add the endpoint words that give 1 and 100 a shared meaning.</p>
         </div>
         <form id="cardForm" class="card-form">
-          <label>Card title <input required maxlength="40" id="titleInput" placeholder="e.g., Conference Season" /></label>
           <label>Category <select id="categoryInput"><option value="research">Research</option><option value="lab-life">Lab life</option><option value="teaching">Teaching</option></select></label>
-          <label class="wide">Prompt 01 <textarea required maxlength="160" id="promptOne" placeholder="0 = … · 100 = …"></textarea></label>
-          <label class="wide">Prompt 02 <textarea required maxlength="160" id="promptTwo" placeholder="0 = … · 100 = …"></textarea></label>
+          <span class="form-spacer" aria-hidden="true"></span>
+          <label class="wide">Topic 01 <textarea required maxlength="78" id="topicOne" placeholder="e.g., How inspiring is a research lab?"></textarea></label>
+          <div class="scale-inputs wide"><label>1 means <input required maxlength="24" id="lowOne" placeholder="draining" /></label><label>100 means <input required maxlength="24" id="highOne" placeholder="invigorating" /></label></div>
+          <label class="wide">Topic 02 <textarea required maxlength="78" id="topicTwo" placeholder="e.g., How clear is a lab’s shared purpose?"></textarea></label>
+          <div class="scale-inputs wide"><label>1 means <input required maxlength="24" id="lowTwo" placeholder="unclear" /></label><label>100 means <input required maxlength="24" id="highTwo" placeholder="compelling" /></label></div>
           <div class="form-actions wide"><span id="formMessage" role="status"></span><button class="button button-accent" type="submit">Add to deck</button></div>
         </form>
       </section>

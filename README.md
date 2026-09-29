@@ -6,7 +6,7 @@ Open `index.html` in a browser, or enable GitHub Pages from this repository's **
 
 ## Use
 
-1. Give each player a secret number from 0–100.
+1. Give each player a secret number from 1–100.
 2. Reveal one topic card and choose either prompt.
 3. Describe an example that fits the strength of your hidden number, without saying it.
 4. Discuss and reveal players' numbers in the group’s predicted order.
